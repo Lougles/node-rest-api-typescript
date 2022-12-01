@@ -1,32 +1,49 @@
-let age: number = 50;
-let names: string = 'Max';
-let toggle: boolean = true;
-let empty: null = null;
-let notInitialize: undefined = undefined;
-let callback = (a: number): number => { return 100 + a };
+let age: number 
+age= 50;
+let names: string 
+names= 'Max';
+let toggle: boolean 
+toggle= true;
+let empty: null 
+empty= null;
+let notInitialize: undefined 
+notInitialize= undefined;
+let callback = (a: number) => number;
+callback = (a) => { return 100 + a };
 
-let anything: any = -20;
+let anything: any 
+anything = -20;
 anything = 'Text'
 anything = {};
 
 let some:unknown;
 some = 'Text';
 let str: string;
-if(typeof(some) === 'string'){
+if(typeof some === 'string'){
   str = some;
 }
 
-let person: [string, number] = ['Max', 21]
+let person: [string, number] 
+person = ['Max', 21]
 
 
-enum Status {
-  LOADING,
-  READY
+enum Load {LOADING, READY}
+
+const page = {
+  load: Load.READY
 }
 
-let twotypes : string | number
+if(page.load === Load.LOADING) {
+  console.log('Page is loading')
+}
 
-let oneoftype: 'enable' | 'disable'
+if(page.load === Load.READY) {
+  console.log('Page is already loaded')
+}
+
+let union : string | number
+
+let literal: 'enable' | 'disable'
 
 function showMessage(message: string): void {
   console.log(message);
@@ -40,16 +57,18 @@ function customError(): never {
   throw new Error('Error');
 }
 
-let myTypes: {
+type Page = {
   title: string;
   likes: number;
   accounts: string[];
   status: string;
-  details: {
+  details?: {
     createAt: string;
     updateAt: string;
   }
-} = {
+}
+
+const page1: Page= {
   title: 'The awesome page',
   likes: 100,
   accounts: ['Max', 'Anton', 'Nikita'],
@@ -60,12 +79,7 @@ let myTypes: {
   }
 }
 
-let myTypes2: {
-  title: string;
-  likes: number;
-  accounts: string[];
-  status: string
-} = {
+const page2: Page = {
   title: 'Python or Js',
   likes: 5,
   accounts: ['Alex'],
