@@ -8,8 +8,8 @@ let empty: null
 empty= null;
 let notInitialize: undefined 
 notInitialize= undefined;
-let callback = (a: number) => number;
-callback = (a) => { return 100 + a };
+
+let callback = (a: number):number => { return 100 + a };
 
 let anything: any 
 anything = -20;
@@ -68,7 +68,7 @@ type Page = {
   }
 }
 
-const page1: Page= {
+const page1: Page = {
   title: 'The awesome page',
   likes: 100,
   accounts: ['Max', 'Anton', 'Nikita'],
