@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,8 @@
   },
   "homepage": "https://github.com/Lougles/node-rest-api-typescript#readme",
   "dependencies": {
-    "eslint": "^8.28.0"
+    "eslint": "^8.28.0",
+    "lite-server": "^2.6.1"
   },
   "devDependencies": {
     "prettier": "2.8.0",
