@@ -39,3 +39,35 @@ function calc(num1: number, num2: number): number {
 function customError(): never {
   throw new Error('Error');
 }
+
+let myTypes: {
+  title: string;
+  likes: number;
+  accounts: string[];
+  status: string;
+  details: {
+    createAt: string;
+    updateAt: string;
+  }
+} = {
+  title: 'The awesome page',
+  likes: 100,
+  accounts: ['Max', 'Anton', 'Nikita'],
+  status: 'open',
+  details: {
+    createAt: '2021-01-01',
+    updateAt: '2021-05-01',
+  }
+}
+
+let myTypes2: {
+  title: string;
+  likes: number;
+  accounts: string[];
+  status: string
+} = {
+  title: 'Python or Js',
+  likes: 5,
+  accounts: ['Alex'],
+  status: 'close',
+}
